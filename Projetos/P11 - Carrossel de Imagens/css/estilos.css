@@ -1,0 +1,62 @@
+.imagens-carrossel {
+    background-color: #777;
+}
+
+.imagens-carrossel img {
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+    display: none; /* A imagem some */
+}
+
+.imagem-ativa {
+    display: block; /* Faz com que a imagem seja mostrada na página */
+    margin: 0 auto;
+}
+
+.miniaturas img {
+    width: auto; 
+    /* A largura será determinada pelas proporções naturais da imagem */
+    
+    max-width: 15%; 
+    /* A largura máxima será 15% do seu contêiner pai */
+    
+    height: 60px;
+    object-fit: cover;
+    display: inline-block; 
+    /* Estejam alinhadas em linha, mas mantém propriedades de bloco (largura e altura). */
+    
+    cursor: pointer;
+}
+
+.miniaturas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.botao-anterior, .botao-proximo {
+    cursor: pointer;
+    position: absolute;
+    
+    /* Verticalmente no meio do contêiner pai. */
+    top: 50%;
+    
+    /* Mover os botões para cima pela metade sua própria altura */
+    transform: translateY(-50%);
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.botao-anterior {
+    left: 0;
+}
+
+.botao-proximo {
+    right: 0;
+}

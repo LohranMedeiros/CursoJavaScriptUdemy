@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão da página */
+    background-color: #f4f4f4; /* Define a cor de fundo da página (cinza claro) */
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 0; /* Remove o espaçamento interno padrão */
+    display: flex; /* Usa flexbox para organizar os elementos */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Faz o body ocupar 100% da altura da tela */
+}
+
+.calculadora {
+    width: 300px; /* Define a largura fixa da calculadora */
+    background-color: #fff; /* Cor de fundo branca */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor */
+    padding: 20px; /* Espaçamento interno (afasta conteúdo das bordas) */
+    box-sizing: border-box; /* Inclui borda e padding dentro da largura total */
+}
+
+.calculadora h2 {
+    margin-top: 0; /* Remove o espaço extra acima do título */
+    text-align: center; /* Centraliza o texto */
+    font-size: 24px; /* Define tamanho da fonte */
+    color: #333; /* Define a cor do texto (cinza escuro) */
+}
+
+.calculadora input[type="text"] {
+    width: 100%; /* Ocupa toda a largura disponível */
+    margin-bottom: 10px; /* Espaçamento abaixo do campo */
+    padding: 10px; /* Espaço interno para o texto não encostar nas bordas */
+    font-size: 20px; /* Tamanho da fonte maior para melhor leitura */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Cantos arredondados */
+    box-sizing: border-box; /* Inclui borda e padding na largura total */
+}
+
+.calculadora input[type="button"] {
+    width: 50px; /* Largura fixa de cada botão */
+    height: 50px; /* Altura fixa de cada botão */
+    margin: 5px; /* Espaçamento entre os botões */
+    font-size: 18px; /* Tamanho da fonte dentro dos botões */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor tipo “mãozinha” ao passar por cima */
+    background-color: #f4f4f4; /* Cor de fundo padrão (cinza claro) */
+}
+
+.calculadora input[type="button"] {
+    background-color: #e0e0e0; /* Sobrescreve a cor de fundo dos botões (um cinza um pouco diferente) */
+}
+
+.calculadora .linha {
+    display: flex; /* Usa flexbox para organizar os elementos dentro da linha */
+    justify-content: space-between; /* Distribui os itens igualmente, com espaço entre eles */
+}

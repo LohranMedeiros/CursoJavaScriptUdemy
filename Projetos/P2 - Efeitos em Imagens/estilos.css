@@ -1,0 +1,351 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container-img {
+    position: relative; /* Torna-se referência sobre o espaço a ocupar/deslocar para os e-filhos  */
+    display: inline-block; /* Visto como um bloco, mas que se alinha com os elementos */
+    margin: 1.25rem;
+    border-radius: 10px; /* Arredonda os cantos das imagens */
+    overflow: hidden;    /* Esconde tudo que ultrapassar do espaço determinado */
+}
+
+.container-img:hover .desc-oculta {
+    opacity: 1; /* Totalmente visivel */
+}
+
+.container-img img {
+    width: 200px;
+    height: 150px;
+    transition: all 0.5s ease; /*Remete-se a todas as propriedades em transição (como opacidade) */
+}
+
+.desc-oculta {
+    position: absolute;
+
+    background-color: rgb(0, 0, 0, 0.7);
+
+    color: white;
+
+    text-align: center;
+    
+    width: 100%;
+
+    bottom: 0;
+
+    padding: 10px 0;
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+}
+
+
+/* Efeito de Zoom com Sobra */
+#img-1:hover img {
+    transform: scale(1.1) rotate(5deg) rotateY(5deg);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Rotação 3D */
+#img-2:hover img{
+    /* Um efeito de espelhamento enquanto tiver o mouse na imagem */
+    transform: rotateY(180deg);
+}
+
+/* Efeito de pulsar */
+
+#img-3:hover img{
+    animation: heartBeat 0.8s infinite;
+        /* Atribui uma animação de pulsar, com o ciclo de 0.8s que se repete */ 
+}
+
+@keyframes heartBeat {
+    /* Define como a animação "heartBeat" deve se comportar nos quadros */
+
+    0%, 100% {
+        transform: scale(1);
+        filter: brightness(100%);
+        /* A animação em seu início e fim retornam ao tramanho e ao brilho original */
+    }
+    25%, 75% {
+        transform: scale(1.2);
+        filter: brightness(120%);
+            /* Aos 25% e 75%, a imagem e seu brilho aumentam em 20%, criando um efeito de "pulso" */
+    }
+    50% {
+        transform: scale(1.1);
+        filter: brightness(110%);
+            /* Na metade, a imagem diminui o tamanho e o brilho para 10%, suavizando o efeito de pulsar  */
+    }
+}
+
+
+/* Zoom de Tela Inteira */
+
+#img-4 img{
+    cursor: pointer;
+
+    transition: position 0.5s ease;
+    /* Necessário para que não bugue a imagem ao crescer */
+}
+
+#img-4:hover img{
+    cursor: pointer;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    z-index: 99999;
+
+    object-fit: cover;
+    /* Cobre todo o espaço disponível, sem distorcer a imagem */
+
+    transform: none;
+}
+
+/* Rotação Tripla */
+
+#img-5:hover img{
+    animation: triple 2s forwards;
+}
+
+@keyframes triple {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(1080deg);
+    }
+}
+
+
+/* Efeito Pêndulo */
+
+#img-6:hover img{
+   transform-origin: top center;
+   /* Diz o ponto "estável" da animação, enquanto ao redor que ocorrerá a animação */
+
+   transition: transform 0.5s ease-in-out;
+
+   animation: swingAprimoradoHover 2s ease-in-out forwards;
+}
+
+@keyframes swingAprimoradoHover {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25%, 75% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+}
+
+/* Preto e Branco */
+
+#img-7:hover img{
+    filter: grayscale(100%);
+}
+
+
+/* Efeito de Onda Luminosa */
+#img-8{
+    position: relative;
+
+    overflow: hidden;
+}
+
+#img-8::after{
+    content: "";
+    /* Necessário para que ocorra o efeito, mesmo que nada escrito seja exibido. */
+
+    position: absolute; /* Que o pseudo-elemento seja absoluto em relação ao container da imagem */
+    
+    top: 0;
+    left: -150%;
+    /* O pseudo-elemento no topo/esquerda do container */
+
+    width: 100%;
+    height: 100%;
+    /* Que o efeito se estenda por toda a imagem */
+
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Efeito quase branco */
+
+    transform: skewX(-20deg);
+    /* Aplica a inclinação no eixo X, criando um efeito mais dinâmico */
+
+    transition: left 0.7s ease-in-out;
+}
+
+#img-8:hover::after{
+    left: 150%;
+    /* No hover, ocorre a transição da esquerda para direita */
+}
+
+#img-8 img{
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+
+/* Efeito Giro Vertical Triplo */
+#img-9 img{
+    transition: transform 0.5s ease;
+    transform-origin: center;
+}
+
+#img-9:hover img{
+    animation: rotateVerticalTriple 2s forwards;
+}
+
+@keyframes rotateVerticalTriple {
+    from {
+        transform: rotateX(0deg);
+    }   
+    to {
+        transform: rotateX(1080deg);
+    } 
+}
+
+/* Efeito de Deslizar com Descrição Centralizada */
+.container-img#img-10 {
+
+    position: relative;
+
+    width: 200px; 
+    /* Define a largura do contêiner da imagem */
+
+    height: 150px; 
+    /* Define a altura do contêiner da imagem */
+
+    overflow: hidden;
+    /* Impede que qualquer conteúdo que ultrapasse os limites deste contêiner seja visível */
+
+    display: inline-block;
+    /* Permite que o contêiner se comporte como um bloco (respeitando propriedades de largura e altura),
+       mas também seja alinhado em linha com outros elementos, como texto ou outros blocos. */
+
+}
+
+/* Configuração da Imagem */
+
+#img-10 img {
+    position: absolute;
+    /* Posiciona a imagem de forma absoluta dentro do contêiner */
+
+    top: 0;
+    left: 0;
+    /* Ancoram a imagem no topo e à esquerda do contêiner, garantindo que ela cubra completamente o espaço designado desde o início da interação */
+
+    width: 100%; 
+    /* Estica a imagem para cobrir a largura total do contêiner */
+
+    height: 100%; 
+    /* Estica a imagem para cobrir a altura total do contêiner */
+
+    transition: transform 0.5s ease-in-out;
+    /* Aplica uma transição suave para todas as transformações de escala ou de posição da imagem.
+       O 'ease-in-out' faz com que a transição tenha um início e um fim suaves */
+}
+
+
+/* Estilização da descrição oculta para #img-10 */
+#img-10 .desc-oculta {
+
+    position: absolute;
+    /* Posiciona a descrição de forma absoluta dentro do contêiner de referência que tem 'position: relative;' */
+
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    /* Posicionam o ponto de referência da descrição no centro exato do contêiner */
+
+    transform: translate(-50%, -50%) translateX(-100%);
+    /*  A primeira parte, 'translate(-50%, -50%)', ajusta a posição para que o centro da descrição alinhe perfeitamente com o 
+        ponto central definido pelos top e left. 
+        A segunda parte, 'translateX(-100%)', inicialmente move a descrição totalmente para a esquerda, fora da tela,
+       preparando-a para deslizar para dentro do contêiner ao interagir */
+
+    white-space: nowrap;
+    /* Impede que o texto dentro da descrição seja quebrado em várias linhas, garantindo que toda a descrição
+       permaneça em uma única linha horizontal */
+
+    padding: 20px;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    color: white;
+
+    font-size: 20px;
+
+    transition: transform 0.5s ease-in-out;
+
+    width: 100%; 
+    height: 100%;
+
+    display: flex;
+    /* Utiliza o modelo de caixa flexível para facilitar o alinhamento do texto dentro da descrição */
+
+    align-items: center; 
+    /* Centraliza o texto verticalmente dentro da descrição, parte do modelo flex */
+
+    justify-content: center; 
+    /* Centraliza o texto horizontalmente dentro da descrição, garantindo que esteja perfeitamente centrado */
+
+    text-align: center;
+    /* Assegura que o texto dentro da descrição esteja centralizado horizontalmente, útil para textos em múltiplas linhas */
+
+    opacity: 0;
+}
+
+
+/* CSS para o Movimento da Imagem ao Passar o Mouse */
+#img-10:hover img {
+
+    transform: translateX(100%);
+    /* Move a imagem horizontalmente para a direita, 100% do seu próprio tamanho  */
+}
+
+/* CSS para a Aparição da Descrição ao Passar o Mouse */
+#img-10:hover .desc-oculta {
+
+    transform: translate(-50%, -50%) translateX(0%);
+    /*  A primeira parte do transform, 'translate(-50%, -50%)', ajusta a descrição para que seu centro esteja exatamente no 
+        centro do contêiner. Isso é feito ao mover a descrição para cima e para a esquerda pela metade de sua altura e largura, respectivamente.
+        A segunda parte, 'translateX(0%)', realinha a descrição para começar exatamente do centro do contêiner, anulando 
+        qualquer deslocamento horizontal previamente aplicado (como o -100% inicial quando está fora da tela) */
+
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

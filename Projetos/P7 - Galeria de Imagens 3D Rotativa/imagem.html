@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Detalhada</title>
+    <link rel="stylesheet" type="text/css" href="estilo-imagem.css">
+</head>
+<body>
+    <main class="imagem-container">
+        <img id="imagem" src="" alt="Detalhes visuais da imagem selecionada">
+    
+        <figcaption id="descricao"></figcaption>
+
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const imagem = params.get('imagem');
+        const descricao = params.get('descricao');
+
+        document.getElementById('imagem').src = imagem;
+        document.getElementById('descricao').textContent = descricao;
+    </script>
+</body>
+</html>

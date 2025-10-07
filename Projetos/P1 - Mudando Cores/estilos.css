@@ -1,0 +1,19 @@
+
+/*  Os seletores <body> e <html> possuem altura definida em 100%. 
+    100% sobre o <body> para que o conteúdo obtenha todo o espaço de altura disponível de seu elemento pai: <html>.
+    100% sobre o <html> para que não seja automático, ou seja, para que o <html> obtenha toda a altura da tela.
+*/
+body, html { 
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}

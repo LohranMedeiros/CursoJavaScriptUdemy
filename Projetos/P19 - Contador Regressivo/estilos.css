@@ -1,0 +1,95 @@
+body {
+    /* Define a ordem de fontes que deve ser seguida */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Transforma o <body> em um contêiner flexível, 
+       permitindo centralizar facilmente os elementos filhos */
+    display: flex; 
+
+    /* Alinha o conteúdo horizontalmente ao centro dentro do body */
+    justify-content: center;
+
+    /* Alinha o conteúdo verticalmente ao centro dentro do body */
+    align-items: center;
+
+    /* Ocupa 100% da altura janela do dispositivo */
+    height: 100vh;
+
+    /* Define a cor de fundo para um tom escuro de azul */
+    background-color: #1a1a2e;
+
+    /* Cor de texto em vermelho */
+    color: #e94560;
+}
+
+.contador {
+    /* Organiza os elementos internos lado a lado com Flexbox */
+    display: flex;
+
+    /* Centraliza o texto dentro de cada div */
+    text-align: center;
+
+    /* Define para um tom escuro mais azul */
+    background-color: #16213e;
+
+    /* Adiciona sombra para dar profundidade com opacidade de 20% */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+    /* Arredonda os cantos */
+    border-radius: 15px;
+
+    /* Impede que o conteúdo ultrapasse os limites do contêiner */
+    overflow: hidden;
+}
+
+.contador div {
+
+    /* Adicione espaçamento interno ao redor do conteúdo */
+    padding: 20px 30px;
+
+    /* Faz cada div crescer igualmente dentro do contêiner */
+    flex-grow: 1;
+
+    /* Cor de fundo mais azul0 */
+    background: #0f3460;
+
+    /* Cor do texto em branco */
+    color: #fff;
+
+    /* Permite posicionar elementos filhos de forma relativa */
+    position: relative; 
+}
+
+/* Aplicado em todas as divs, exceto o último */
+.contador div:not(:last-child){
+    /* Aplica uma borda no lado direito */
+    border-right: 5px solid #1a1a2e;
+}
+
+.contador span {
+    /* Faz o span se comportar como um bloco, ocupando toda a largura disponível */
+    display: block;
+
+    /* Define o tamanho da fonte */
+    font-size: 16px;
+
+    /* Define a cor do texto como branca */
+    color: #ffffff
+}
+
+/* Cria uma animação chamada "fade" para transição de opacidade */
+@keyframes fade {
+    from {
+        /* Inicia invisível */
+        opacity: 0;
+    }
+    to {
+        /* Termina visível */
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    /* Executa a animação de transição em 0.5s */
+    animation: fade 0.5s;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Caixa Eletrônico</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1> Caixa Eletrônico </h1>
+
+        <div class="login-container">
+            <input type="text" id="usuario" placeholder="Usuário">
+            <input type="password" id="senha" placeholder="Senha">
+
+            <button onclick="login()"> Entrar </button>
+
+            <button onclick="registrar()"> Registrar </button>
+        </div>
+        
+        <div class="atm-container">
+            <h3> Bem-vindo, <span id="nome">  </span> </h3>
+
+            <p> Conta: <span id="conta">  </span></p>
+            <p> Saldo: R$ <span id="saldo">  </span></p>
+
+            <button onclick="exibirDepositar()"> Depositar </button>
+            <button onclick="exibirSacar()"> Sacar </button>
+            <button onclick="exibirHistorico()"> Histórico de Transações </button>
+            <button onclick="logout()"> Sair </button>
+        </div>
+        
+        <div class="deposito-container">
+            <h3> Depósito </h3>
+
+            <input type="number" id="deposito" placeholder="R$ 0,00">
+            <button onclick="depositar()"> Depositar </button>
+            <button onclick="cancelar()"> Cancelar </button>
+        </div>
+
+        <div class="saque-container">
+            <h3> Saque </h3>
+
+            <input type="number" id="saque" placeholder="R$ 0,00">
+            <button onclick="sacar()"> Sacar </button>
+            <button onclick="cancelar()"> Cancelar </button>
+        </div>
+
+        <div class="historico-container">
+            <h3> Histórico de Transações </h3>
+
+            <textarea id="historico-text" rows="10" cols="40" readonly></textarea>
+            <button onclick="cancelar()"> Voltar </button>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

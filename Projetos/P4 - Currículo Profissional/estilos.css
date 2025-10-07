@@ -1,0 +1,126 @@
+body, html {
+    height: 100%;
+
+    margin: 0;
+
+    padding: 10px;
+
+    font-family: 'Roboto', sans-serif;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    background: #f4f4f4;
+}
+
+.curriculo {
+    display: flex;  
+    /* É o que proporciona as colunas ficarem lado a lado */
+
+    width: 100%;
+
+    min-height: 80vh;
+
+    color: #333;
+
+    box-shadow: 0 4px 8px rgba(0, 0, -0, 0.1);
+
+    margin-top: 10px;
+}
+
+.painel-esquerdo{
+    background-color: #268ac9;
+
+    color: white;
+
+    padding: 40px;
+
+    width: 35%;
+}
+
+.perfil {
+    text-align: center;
+}
+
+.perfil img {
+    width: 200px;
+
+    height: 200px;
+
+    border-radius: 50%;
+
+    margin-top: 90px;
+
+    margin-bottom: 20px;
+}
+
+.perfil h1 {
+    font-size: 24px;
+
+    margin: 0;
+}
+
+.perfil p {
+    font-size: 18px;
+
+    margin: 0;
+
+    margin-bottom: 20px;
+}
+
+.info-contatos h2, .habilidades h2, .experiencia h2, .educacao h2, .projetos h2, .certificacoes h2, .conquistas h2 {
+    font-size: 20px;
+
+    border-bottom: 2px solid white;
+
+    padding: 10px;
+
+    margin-top: 40px;
+
+    display: flex;
+    
+    align-items: center;
+}
+
+.info-contatos i, .habilidades i, .experiencia i, .educacao i, .projetos i, .certificacoes i, .conquistas i{
+    margin-right: 10px;
+}
+
+.info-contatos ul, .habilidades ul{
+    list-style-type: none;
+
+    padding: 0;
+}
+
+.info-contatos ul, .habilidades li{
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+}
+
+.painel-direito{
+    background-color: #f0f0f0;
+
+    color: #333;
+
+    padding: 40px;
+
+    width: 65%;
+}
+
+.experiencia p{
+    margin: 20px 0;
+
+    line-height: 1.5;
+
+    font-size: 16px;
+
+
+}
