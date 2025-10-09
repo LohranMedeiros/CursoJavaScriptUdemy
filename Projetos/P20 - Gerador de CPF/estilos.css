@@ -1,0 +1,98 @@
+body {
+    /* Define as fontes usadas */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Todos os espaços ao redor do body são removidos */
+    margin: 0;
+
+    /* Remove todo o preenchimento interno */
+    padding: 0;
+
+    /* Define a cor para um cinza claro */
+    background-color: #f2f2f2;
+}
+
+.container {
+    /* Define largura máxima para 600px */
+    max-width: 600px;
+
+    /* Margens verticais para 50px e laterais para automático */
+    margin: 50px auto;
+
+    /* Preenchimento interno de 20px */
+    padding: 20px;
+
+    /* Fundo branco */
+    background-color: #fff;
+
+    /* Bordar arredondadas em 8px */
+    border-radius: 8px;
+
+    /* Leve sombra ao redor, com 10% de opacidade e 10px de desfoque */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.h1 {
+    /* Alinha o texto ao centro do elemento */
+    text-align: center;
+
+    /* Define a cor do texto para cinza escuro */
+    color: #333;
+}
+
+.cpf-container {
+    /* Permite flexibilidade: facilita alinhamento e distribuição de espaço */
+    display: flex;
+
+    /* Alinha verticalmente ao centro */
+    align-items: center;
+}
+
+input[type="text"] {
+    /* Input ocupe todo o espaço possível */
+    flex: 1;
+
+    /* Preenchimento de 10px */
+    padding: 10px;
+
+    /* Tamanho do texto em 16px */
+    font-size: 16px;
+
+    /* Bordar de 1px de cor cinza claro */
+    border: 1px solid #ccc;
+
+    /* Arredonda as bordas do lado superior-esquerdo e inferior-esquerdo */
+    border-radius: 5px 0 0 5px;
+}
+
+button {
+    /* Preenchimento vertical em 10px e lateral em 20px */
+    padding: 10px 20px;
+
+    /* Tamanho do texto em 16px */
+    font-size: 16px;
+
+    /* Fundo de cor azul brilhante */
+    background-color: #007bff;
+
+    /* Cor do texto é branca */
+    color: #fff;
+
+    /* Remove qualquer borda */
+    border: none;
+
+    /* Arredonda as bordas direitas */
+    border-radius: 0 5px 5px 0;
+
+    /* Indica que é clicável */
+    cursor: pointer;
+
+    /* Adiciona uma transição para o fundo, ao longo de 0.3 segundos */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    /* Azul mais escuro quando o mouse está sobre ele */
+    background-color: #02264b;
+}
+
